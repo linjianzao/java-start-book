@@ -8,6 +8,7 @@ final public class childrenClass extends parentClass {
 	
 	public static void main(String[] args){
 		new childrenClass().childrenClass();
+		new childrenClass().classConversion();
 	}
 	
 	public void childrenClass(){
@@ -28,6 +29,19 @@ final public class childrenClass extends parentClass {
 	
 	public String show (parentClass obj){
 		return (" parentClass ");
+	}
+	
+	/**
+	 * 类 类型转换
+	 * */
+	public void classConversion(){
+		childrenClass cC = new childrenClass();
+		//objectClass oc = (childrenClass)cC; //这个会报错,子类和父类之间才能互相转换
+		parentClass pC = (childrenClass)cC; //这个会正常运行
+		//所以进行类型转换之前需要判断类型,使用instanceof
+		if(cC instanceof parentClass){
+			parentClass iPC = (childrenClass)cC;
+		}
 	}
 	
 }
