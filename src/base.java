@@ -117,9 +117,39 @@ public class base {
 		eEnum s = eEnum.M;
 		s.getValue();
 		
+		
+		ErrorCode.ILLEGAL_PARAM.getIndex();//1001
+		ErrorCode.ILLEGAL_PARAM.getName(); //illegal paramer
+		
+		
 		//final 
 		final double PI = 3.1415926D; //final 变量只能被赋值一次,一般用来当常量
 	}
+	
+	public enum ErrorCode {
+	    SUCCESS(0, "success"),
+	    ILLEGAL_PARAM(1001, "illegal paramer"),
+	    PARAM_ABSENT(1002, "necessary paramer absent"),
+	    DB_EXCEPTION(1003, "database exception"),
+	    EXCEPTION(1004, "system exception"),
+	    ELSE(1000, "other reason");
+	    
+	    private int index;
+	    private String name;
+	    private ErrorCode(int index, String name){
+		this.index = index;
+		this.name = name;
+	    }
+	    
+	    public String getName(){
+		return name;
+	    }
+	    
+	    public int getIndex(){
+		return index;
+	    }
+	}
+	
 	
 	/**
 	  * 运算符

@@ -6,7 +6,18 @@ package object;
  * 所有枚举类型都是
  * */
 public enum enumClass {
-	SMALL,MEDIUM,LARGE,EXTRA_LARGE;
-	
+	SMALL(0,"small"),MEDIUM(1,"medium"),LARGE(2,"large"),EXTRA_LARGE(3,"extra_large");
+	private int index;
+	private String name;
+	private enumClass(int index,String name){
+		this.index = index;
+		this.name = name;
+	}
+	public int getIndex(){
+		return index;
+	}
+	public String getName(){
+		return name;
+	}
 	
 }
