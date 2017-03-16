@@ -9,11 +9,11 @@ import java.io.SyncFailedException;
 * @author linjianzao
 * @Time   2017-03-15
 */
-public class error {
+public class errorClass {
 	
 	public static void main (String[] agrs) throws Throwable{
 		try{
-			new error().read("xxx.txt");
+			new errorClass().read("xxx.txt");
 		}catch(SyncFailedException e){
 			
 		}

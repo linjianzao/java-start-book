@@ -10,21 +10,21 @@ import java.util.Date;
 * @Time   2017-03-06
 */
 
-public class base {
+public class baseClass {
 	public static void main (String[] agrs){
 		System.out.println("hello world");//输出
-		new base().dataType();//数据类型
-		new base().operator();//运算符
-		new base().conversion();//类型转换
+		new baseClass().dataType();//数据类型
+		new baseClass().operator();//运算符
+		new baseClass().conversion();//类型转换
 		//new base().inputOutput();//输入输出
-		new base().fileInputOutput();//文件输入输出
-		new base().ifProcess(); // if
-		new base().whileProcess();// while
-		new base().doWhileProcess();// do while
-		new base().forProcess();// for
-		new base().forEachProcess();// for each
-		new base().switchProcess();// switch
-		new base().array();// 数组
+		new baseClass().fileInputOutput();//文件输入输出
+		new baseClass().ifProcess(); // if
+		new baseClass().whileProcess();// while
+		new baseClass().doWhileProcess();// do while
+		new baseClass().forProcess();// for
+		new baseClass().forEachProcess();// for each
+		new baseClass().switchProcess();// switch
+		new baseClass().array();// 数组
 		
 		
 		
