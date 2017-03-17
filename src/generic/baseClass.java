@@ -1,12 +1,13 @@
-package object;
+package generic;
 
 import java.util.ArrayList;
 import java.util.Date;
+import object.objectClass;
 
 /**
  * 泛型
  * */
-public class genericClass {
+public class baseClass {
 	
 	/**
 	 * ArrayList
@@ -15,7 +16,21 @@ public class genericClass {
 	 * 使用size() 替换length
 	 * 使用a.get(i)替换a[i]访问元素
 	 * */
-	public static void main(String[] args){
+	public static void main (String[] agrs){
+		new baseClass().base();
+		new baseClass().arrayListFunc();
+		simpleGenericClass<String> sg = new simpleGenericClass<String>();
+		sg.setFirst("2121");
+		sg.getFirst();
+		sg.getMiddle("1","2","3","4");//3
+		
+		String[] slist= {"1","2","3"};
+		sg.min(slist); //1
+		
+		
+	}
+	
+	public void base(){
 		//创建一个类型为objectClass的泛型数组，会在执行的时候才确定数组大小。
 		ArrayList<objectClass> staff =  new ArrayList<objectClass>();
 		staff.add(new objectClass()); //添加
@@ -33,7 +48,6 @@ public class genericClass {
 		staff.get(0);
 		staff.set(0,new objectClass());
 		
-		new genericClass().arrayListFunc();
 	}
 	
 	public void arrayListFunc(){
